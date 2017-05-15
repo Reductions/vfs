@@ -2,18 +2,17 @@
 #define BASE_FILE_HPP
 
 #include <ctime>
-
-#include "string.hpp"
+#include <string>
 
 namespace vfs{
 class base_file
 {
   tm _create_time;
   tm _update_time;
-  string _name;
+  std::string _name;
 public:
   base_file(const char* name);
-private:
+protected:
   void _on_update();
 };
 }
